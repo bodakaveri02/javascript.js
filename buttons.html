@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Buttons</title>
+</head>
+<body>
+
+    <button onclick="showQuantity()">Show Quantity</button>
+    <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="add2()">+2</button>
+    <button onclick="add3()">+3</button>
+    <button onclick="removeFromCart()">Remove from Cart</button>
+    <button onclick="add4()">+4</button>
+    <button onclick="add5()">+5</button>
+    <button onclick="resetCart()">Reset Cart</button>
+
+    <script>
+        // initialize cart quantity
+        let quantity = 0;
+
+        function showQuantity() {
+            console.log("Cart Quantity:", quantity);
+        }
+
+        function addToCart() {
+            quantity += 1;
+            showQuantity();
+        }
+
+        function add2() {
+            quantity += 2;
+            showQuantity();
+        }
+
+        function add3() {
+            quantity += 3;
+            showQuantity();
+        }
+
+        function add4() {
+            quantity += 4;
+            showQuantity();
+        }
+
+        function add5() {
+            quantity += 5;
+            showQuantity();
+        }
+
+        function removeFromCart() {
+            if (quantity > 0) {
+                quantity -= 1;
+            } else {
+                console.log("Cart is already empty!");
+            }
+            showQuantity();
+        }
+
+        function resetCart() {
+            quantity = 0;
+            showQuantity();
+        }
+    </script>
+<!--- <button onclick="console.log('cart quantity: ${cartquantity}')">+1</button>-->
+</body>
+</html>
