@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>Amazon Shipping Calculator</p> 
+   <input type="text" class="js-cost-input" onkeydown="handlecostkeydown(event);">
+   <button type="button" onclick="calculateTotal();">calculate</button>
+   <p class="js-total-cost"></p>
+   <script>
+    function handlecostkeydown(){
+        if(event.key==='enter'){
+            calculateTotal();
+        }
+    }
+    function calculateTotal(){
+        const shippingElement=document.querySelector(".js-cost-input");
+        let shippingAmount= Number(shippingElement.value);
+        if(shippingAmount<40){
+            shippingAmount +=10;
+        }
+        document.querySelector(".js-total-cost")
+        .innerHTML=`$${shippingAmount}`;
+       
+        }
+    
+   </script>
+</body>
+</html>
