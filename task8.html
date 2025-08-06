@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--<body>
+    <button type="setIntervalBtn">set interval</button>
+    <button type="clearIntervalBtn">clear clearInterval</button>
+</body>
+<script>
+    let setIntervalBtn=document.getElementById("setIntervalBn");
+    let clearIntervalBtn=document.getElementById("clearIntervalBtn");
+
+    let uniqueId=null;
+    setIntervalBtn.onclick=function(){
+        let counter=0;
+        uniqueId=setInterval(function(){
+            console.log(counter);
+            counter=counter+1;
+        },2000);
+        console.log("Inteval ID:",uniqueId);
+    }
+clearIntervalBtn.onclick=function(){
+    clearInterval(uniqueId);
+    console.log("Interval stopped");
+}-->
+<body>
+    <button id="setTimeoutbtn">set Timeout</button>
+    <button id="clearTimeoutbtn">clear Timeout</button>
+</body>
+<script>
+ let setTimeoutBtn=document.getElementById("setTimeoutBtn");
+    let clearTimeoutBtn=document.getElementById("clearTimeoutBtn");
+    let TimeoutId=null;
+    setTimeoutBtn.onclick=function(){
+        timeoutId=setTimeout(function(){
+console.log("hello! this is shown after 5 sec.");
+        },5000);
+    }
+
+    
+</script>
+</html>
